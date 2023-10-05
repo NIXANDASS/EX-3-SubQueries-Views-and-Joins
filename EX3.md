@@ -70,44 +70,59 @@ INSERT INTO DEPT (DEPTNO, DNAME, LOC) VALUES (40, 'OPERATIONS', 'BOSTON');
 
 ### QUERY:
 
+ ```SELECT ename FROM EMP WHERE sal > (SELECT sal FROM EMP WHERE empno = 7566);```
 
 ### OUTPUT:
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/b175d634-84c7-404f-b147-398f45e1c3fe)
 
 ### Q2) List the ename,job,sal of the employee who get minimum salary in the company.
 
 ### QUERY:
 
+``` SELECT ename,job,sal FROM EMP WHERE sal = (SELECT MIN(sal) FROM EMP);```
 
 ### OUTPUT:
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/505fb509-20bc-48a2-bf5b-24d864f3da86)
 
 ### Q3) List ename, job of the employees who work in deptno 10 and his/her job is any one of the job in the department ‘SALES’.
 
 ### QUERY:
 
+ ```SELECT ename,job FROM EMP WHERE deptno = 10 AND job IN (SELECT job FROM EMP WHERE job = 'sales');```
 
 ### OUTPUT:
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/8a555bb8-55ee-4e50-8aa8-75710393a072)
 
 
 ### Q4) Create a view empv5 (for the table emp) that contains empno, ename, job of the employees who work in dept 10.
 
 ### QUERY:
 
+```create view empv5 as select EMPNO,ENAME,JOB from EMP where DEPTNO=10;```
+```SELECT * FROM empv5; ```
 
 ### OUTPUT:
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/f820889d-5c50-4584-b7ce-cc79fa8324a0)
+
 
 ### Q5) Create a view with column aliases empv30 that contains empno, ename, sal of the employees who work in dept 30. Also display the contents of the view.
 
 ### QUERY:
 
+```create view empv30 AS select EMPNO,ENAME,SAL from EMP where DEPTNO=30;```
+```SELECT * FROM empv30;```
 
 ### OUTPUT:
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/65208105-0e64-4358-b5b2-9144b6d3071f)
+
 
 ### Q6) Update the view empv5 by increasing 10% salary of the employees who work as ‘CLERK’. Also confirm the modifications in emp table
 
 ### QUERY:
-
-
+ ```create view empv6 as select EMPNO,ENAME,SAL,JOB from EMP;```
+ ```SELECT * FROM empv6;```
 ### OUTPUT:
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/66920e40-4ae8-478b-9e1b-c32b4fb7bb05)
 
 ## Create a Customer1 Table
 ```sql
