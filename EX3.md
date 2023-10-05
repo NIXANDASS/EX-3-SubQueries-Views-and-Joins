@@ -155,24 +155,29 @@ INSERT INTO Salesman1 (salesman_id, name, city, commission) VALUES(5003, 'Lauson
 ### Q7) Write a SQL query to find the salesperson and customer who reside in the same city. Return Salesman, cust_name and city.
 
 ### QUERY:
-
+```select s.name,c.cust_name,s.city from salesman1 s ,customer1 c where s.city=c.city;```
 
 ### OUTPUT:
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/10bb6a16-011f-426c-a88c-a8715cf30fc4)
+
 
 ### Q8) Write a SQL query to find salespeople who received commissions of more than 13 percent from the company. Return Customer Name, customer city, Salesman, commission.
 
 
 ### QUERY:
 
+```select s.name,c.cust_name,c.city,s.commission from salesman1 s inner join customer1 c on s.city=c.city where s.commission>0.13;```
 
 ### OUTPUT:
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/5c9e0b6c-292d-457d-ae4d-be60e67bce32)
 
 ### Q9) Perform Natural join on both tables
 
 ### QUERY:
-
+``` select * from salesman1 s natural join customer1 c;```
 
 ### OUTPUT:
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/5dbdfa7e-eef8-4b09-b7b3-8bde54734063)
 
 ### Q10) Perform Left and right join on both tables
 
