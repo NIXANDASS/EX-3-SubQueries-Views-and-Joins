@@ -187,6 +187,7 @@ select s.name,c.cust_name,c.city,s.commission from salesman1 s left join custome
 select s.name,c.cust_name,c.city,s.commission from salesman1 s right join customer1 c on s.salesman_id=c.salesman_id;
 ```
 ### OUTPUT:
+
 ### LEFT JOIN
 ![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/78608ba5-033b-4cc6-93b3-ec72c7d8add0)
 
