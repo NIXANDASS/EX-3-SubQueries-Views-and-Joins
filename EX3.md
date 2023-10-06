@@ -182,6 +182,19 @@ INSERT INTO Salesman1 (salesman_id, name, city, commission) VALUES(5003, 'Lauson
 ### Q10) Perform Left and right join on both tables
 
 ### QUERY:
-
-
+```
+select s.name,c.cust_name,c.city,s.commission from salesman1 s left join customer1 c on s.salesman_id=c.salesman_id;
+select s.name,c.cust_name,c.city,s.commission from salesman1 s right join customer1 c on s.salesman_id=c.salesman_id;
+```
 ### OUTPUT:
+### LEFT JOIN
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/78608ba5-033b-4cc6-93b3-ec72c7d8add0)
+
+### RIGHT JOIN
+![image](https://github.com/NIXANDASS/EX-3-SubQueries-Views-and-Joins/assets/118781418/06988161-45ab-4e50-a1eb-e0247227a7fb)
+
+
+
+
+
+
